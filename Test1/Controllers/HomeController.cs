@@ -47,7 +47,6 @@ namespace Test1.Controllers
 
 
             return Json(p);
-            //return Json("test", JsonRequestBehavior.AllowGet);
         }
 
 
