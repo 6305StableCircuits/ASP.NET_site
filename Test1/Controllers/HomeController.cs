@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Test1.Models;
+using Newtonsoft.Json;
 
 
 namespace Test1.Controllers
@@ -41,14 +42,14 @@ namespace Test1.Controllers
         }
 
         [HttpPost]
-        public JsonResult GetInfo(int first, int second)
+        public JsonResult GetInfo(person p)
         {
-            person p = new person();
+     
             p.name = "";
 
             int result = 0;
-            result = first + second;
-            return Json(result);
+      
+            return Json(p);
             //return Json("test", JsonRequestBehavior.AllowGet);
         }
 
