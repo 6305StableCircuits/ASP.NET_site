@@ -18,7 +18,17 @@ $(document).ready(function () {
             url: '/Home/GetInfo',
             type: "POST",
             dataType: "json",
-            data: { first, second},
+            data: { 
+                Feet: "Stnky",
+                Arms: "Long",
+                Toes: "Many",
+                Age: 15,
+                Name: "Bob",
+                CanDrive: false,
+                CanVote: false,
+                YearsTillDrive: 0,
+                YearsTillVote: 0         
+            },
             success: ShowResult,
             error: function () {
                 alert('An Error occurred and the Admin was notified.');
@@ -32,7 +42,7 @@ $(document).ready(function () {
 
     function ShowResult(data) {
 
-        alert(data);
+        alert(data.name);
 
     }
 

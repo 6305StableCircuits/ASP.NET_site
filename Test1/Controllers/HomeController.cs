@@ -44,11 +44,8 @@ namespace Test1.Controllers
         [HttpPost]
         public JsonResult GetInfo(person p)
         {
-     
-            p.name = "";
 
-            int result = 0;
-      
+
             return Json(p);
             //return Json("test", JsonRequestBehavior.AllowGet);
         }
